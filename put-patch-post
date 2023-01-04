@@ -1,0 +1,19 @@
+The HTTP verbs PUT, POST, and PATCH are used to create, update, and modify resources on the server.
+
+Here are the main differences between them:
+
+PUT
+
+Replaces the entire resource at the specified target
+The resource is created if it does not exist
+The request is idempotent, meaning that multiple identical requests will have the same effect as a single request
+POST
+
+Creates a new resource
+The resource is created as a subordinate of the specified target
+The request is not idempotent
+PATCH
+
+Modifies the resource at the specified target
+The request is not idempotent
+In general, you should use POST to create resources and PUT to update them. PATCH is typically used to update a subset of the resource's properties.
